@@ -98,7 +98,6 @@ const rankCheck = score => {
 
 // ゲームを終了
 const gameOver = id => {
-  clearInterval(id);
 
   // 既存の要素を使って終了メッセージを表示
   untypedfield.textContent = 'ゲーム終了！';
@@ -108,6 +107,8 @@ const gameOver = id => {
   setTimeout(() => {
     const result = confirm(rankCheck(score));
   }, 1000);
+
+  clearInterval(id);
 
   // OKボタンをクリックされたらリロードする
   if (result == true) {
