@@ -29,10 +29,3 @@ body {
 .typo {
   background-color: red;
 }
-
-/* スコアの表示される領域 */
-#score {
-  margin: 0;
-  font-weight: bold;
-  color: #888;
-}

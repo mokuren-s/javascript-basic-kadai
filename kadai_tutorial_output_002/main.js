@@ -27,8 +27,7 @@ const textLists = [
   'ECMAScript','console.log','for while if switch',
   'var let const','Windows Mac Linux iOS Android',
   "Let's strat programming"
-]
-
+];
 
 // ランダムなテキストを表示
 const createText = () => {
@@ -102,22 +101,21 @@ const rankCheck = score => {
 
 // ゲームを終了
 const gameOver = id => {
+  clearInterval(id);
 
   // 既存の要素を使って終了メッセージを表示
-  untypedfield.textContent = 'タイムアップ！';
+  untypedfield.textContent = 'タイムアップ！'; // untypedフィールドに表示
   typedfield.textContent = ''; //typedフィールドを空にする
 
   // 終了して１秒後にスコアを表示
   setTimeout(() => {
     const result = confirm(rankCheck(score));
-  }, 1000);
-
-  clearInterval(id);
-
-  // OKボタンをクリックされたらリロードする
-  if (result == true) {
-    window.location.reload();
-  }
+    
+      // OKボタンをクリックされたらリロードする
+      if (result == true) {
+      window.location.reload();
+    }
+  }, 10);
 };
 
 // カウントダウンタイマー
