@@ -107,7 +107,7 @@ const gameOver = id => {
   untypedfield.textContent = 'タイムアップ！'; // untypedフィールドに表示
   typedfield.textContent = ''; //typedフィールドを空にする
 
-  // 終了して１秒後にスコアを表示
+  // 終了して10ミリ秒後にスコアを表示
   setTimeout(() => {
     const result = confirm(rankCheck(score));
     
